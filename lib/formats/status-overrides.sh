@@ -5,5 +5,5 @@ dump ">> status overrides"
 tmux set -g status-justify centre
 tmux set -g status-style bg=#{default},fg=#{@Light0_S}
 tmux set -g window-status-style default 
-tmux set -g window-status-current-style bg=#{default},fg=#{@Orange}
+tmux set -g window-status-current-style bg=#{@Dark0},fg=#{@Orange}
 
