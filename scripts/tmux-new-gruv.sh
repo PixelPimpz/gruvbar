@@ -32,7 +32,7 @@ main ()
   optionsFromYaml "$icons" ".icons.sys"
 
   ## load base status bar format
-  tmux source "$LOCAL_ROOT/lib/formats/status-overrides.conf"
+  tmux run  "$LOCAL_ROOT/lib/formats/status-overrides.sh"
   ## load units 
   #tmux run "$LOCAL_ROOT/units/nvim-info.unit"
   
