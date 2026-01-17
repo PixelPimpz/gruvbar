@@ -34,6 +34,9 @@ main ()
 
   ## load base status bar format
   tmux run  "$LOCAL_ROOT/lib/formats/status-overrides.sh"
+  #tmux run  "$LOCAL_ROOT/lib/formats/status-right.sh"
+  #tmux run  "$LOCAL_ROOT/lib/formats/status-lef.sh"
+  
   ## load units 
   #tmux run "$LOCAL_ROOT/units/nvim-info.unit"
   

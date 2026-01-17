@@ -12,3 +12,5 @@ tmux set -g status-style bg=#{default},fg=#{@Light0_S}
 tmux set -g window-status-style fg=#{@Dark4}
 tmux set -g window-status-current-style fg=#{@Orange}
 tmux set -g window-status-last-style fg=#{@Yellow}
+
+tmux set -g window-activity-status-style bg=#{@Purple}
