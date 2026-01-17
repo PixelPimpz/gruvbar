@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-LOCAL_ROOT="$(tmux show -gqv @LOCAL_ROOT)"
+LOCAL_ROOT="../$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 YQ="/usr/bin/yq"
 
 # include helper functions
