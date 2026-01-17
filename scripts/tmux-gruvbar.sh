@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 LOCAL_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-LOCAL_ROOT="${LOCAL_ROOT#\/*}"
+LOCAL_ROOT="${LOCAL_ROOT%\/*}"
 YQ="/usr/bin/yq"
 
 # include helper functions
