@@ -10,7 +10,8 @@ dump ">> status overrides"
 tmux set -g status-justify centre
 tmux set -g status-style bg=#{default},fg=#{@Light0_S}
 tmux set -g window-status-style fg=#{@Dark4}
-tmux set -g window-status-current-style fg=#{@Orange}
-tmux set -g window-status-last-style fg=#{@Yellow}
+tmux set -g window-status-current-style fg=#{@Yellow},bold
+tmux set -g window-status-last-style fg=#{@Orange}
+tmux set -g window-status-activity-style bg=#{default},fg=#{default}
+tmux set -g status-right "#{?window_bigger,[#{window_offset_x}#,#{window_offset_y}] ,}"
 
-tmux set -g window-status-activity-style bg=#{@Purple}

@@ -1,0 +1,10 @@
+# cSpell:disable
+status-units:
+  left:
+    unit_1: git-status
+    unit_2: lang
+    unit_3: cursor
+  right:
+    unit_4: nvim-info
+    unit_5: clockette
+    unit_6: calendar
