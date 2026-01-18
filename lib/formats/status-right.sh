@@ -6,6 +6,5 @@ SHARE="$( tmux show -gqv @CHER )"
 source "$SHARE/lib/share/dump.fun"
 source "$SHARE/lib/share/fatal.fun"
 
-dump ">> hello dumpling"
-#dump ">> $LOCAL_ROOT"
-#dump ">> $SHARE"
+dump ">> LOCAL_ROOT: $LOCAL_ROOT"
+dump ">> SHARE: $SHARE"
