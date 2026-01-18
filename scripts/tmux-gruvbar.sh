@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 LOCAL_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 LOCAL_ROOT="${LOCAL_ROOT%\/*}"
+SHARE=$( tmux show -gqv @CHER )
 YQ="/usr/bin/yq"
 
 # include helper functions
@@ -36,7 +37,7 @@ main ()
   tmux run  "$LOCAL_ROOT/lib/formats/status-overrides.sh"
   tmux run  "$LOCAL_ROOT/lib/formats/status-right.sh"
   #tmux run  "$LOCAL_ROOT/lib/formats/status-lef.sh"
-  
+  dump ">> LOCAL_ROOT:$LOCAL_ROOT"
   ## load units 
   #tmux run "$LOCAL_ROOT/units/nvim-info.unit"
   
