@@ -3,11 +3,20 @@ LOCAL_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 LOCAL_ROOT="${LOCAL_ROOT%\/*\/*}"
 SHARE="$( tmux show -gqv @CHER )"
 
-## include dependencies
-source "$SHARE/lib/share/dump.fun"
-source "$SHARE/lib/share/fatal.fun"
+main()
+{
+  ## include dependencies
+  source "$SHARE/lib/share/dump.fun"
+  source "$SHARE/lib/share/fatal.fun"
 
-## Data dumps for testing/debugging
-dump ">>> lib/share/status-right.sh running..."
-dump ">> LOCAL_ROOT: $LOCAL_ROOT"
-dump ">> SHARE: $SHARE"
+  ## read the units and place them in their respective
+  #  places
+  tmux set -ag status-right "#{E:@nvim-info-unit}"
+
+  ## Data dumps for testing/debugging
+  dump ">>> lib/share/status-right.sh running..."
+  dump ">> LOCAL_ROOT: $LOCAL_ROOT"
+  dump ">> SHARE: $SHARE"
+}
+ 
+main
