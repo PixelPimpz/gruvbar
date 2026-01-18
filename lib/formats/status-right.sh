@@ -11,7 +11,7 @@ main()
 
   ## read the units and place them in their respective
   #  places
-  tmux set -ag status-right "#{@nvim-info-unit}"
+  tmux set -ag status-right "#{E:@nvim-info-unit}"
 
   ## Data dumps for testing/debugging
   dump ">>> lib/share/status-right.sh running..."
