@@ -5,6 +5,6 @@ SHARE="$( tmux show -gqv @CHER )"
 ## include dependencies
 source "$SHARE/lib/share/dump.fun"
 source "$SHARE/lib/share/fatal.fun"
-
+dump ">>> lib/share/status-right.sh running..."
 dump ">> LOCAL_ROOT: $LOCAL_ROOT"
 dump ">> SHARE: $SHARE"
