@@ -14,3 +14,4 @@ tmux set -g window-status-current-style fg=#{@Yellow},bold
 tmux set -g window-status-last-style fg=#{@Orange}
 tmux set -g window-status-activity-style bg=#{default},fg=#{default}
 tmux set -g status-right-length 0
+tmux set -g message-style "#[bg=default,fg=#{@Orange},align=centre]#{@Alert}
