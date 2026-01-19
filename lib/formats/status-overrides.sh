@@ -7,7 +7,7 @@
 LOCAL_ROOT="$( tmux show -gqv @LOCAL_ROOT )"
 source "$LOCAL_ROOT/lib/share/dump.fun"
 dump ">> status overrides"
-tmux set -g @message-tmux-reload "#[align=centre]#{@Alert}#[fg=#{@Light2},bg=#{@Dark0}]  ~/.tmux.conf reloaded  #{@Alert}"
+tmux set -g @message-tmux-reload "#{@Alert}  ~/.tmux.conf reloaded  #{@Alert}"
 tmux set -g status-justify centre
 tmux set -g status-style bg=#{default},fg=#{@Light0_S}
 tmux set -g window-status-style fg=#{@Dark4}
