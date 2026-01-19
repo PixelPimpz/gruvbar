@@ -13,7 +13,7 @@ main()
   ## read the units and place them in their respective
   #  places
   tmux set -ag status-right "#{E:@nvim-info-unit}"
-  tmux set -ag status-right "#{@clock}"
+  tmux set -ag status-right "#{@clockette}"
   ## Data dumps for testing/debugging
   dump ">> SHARE: $SHARE"
 }
