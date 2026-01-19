@@ -10,7 +10,7 @@ icons:
     SmallTriangleL: ""
     HemiR: ""
     HemiL: ""
-    Alert: "#[fg=#{@Orange}]"
+    Alert: "#[fg=#{@Orange}]#[fg=default]"
     ReloadAlert: "󱄋"
     TriangleLInverse: ""
     TriangleRInverse: ""
