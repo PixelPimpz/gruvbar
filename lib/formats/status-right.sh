@@ -13,7 +13,7 @@ main()
   ## read the units and place them in their respective
   #  places
   tmux set -g status-right "#{E:@nvim-info-unit}"
-  tmux set -ag status-right "#{T:@clockette} "
+  tmux set -ag status-right "#{T:@clockette}"
   tmux set -ag status-right "#{T:@calendar}"
 
   ## Data dumps for testing/debugging
