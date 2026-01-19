@@ -4,11 +4,6 @@ tmux set -g '@LOCAL_ROOT' "$LOCAL_ROOT"
 tmux set -g '@TSTAMP' '+%d%m%y:%H%M%S.%3N'
 tmux set -g '@LOCAL_LOG' "/tmp/gruvbar.log"
 
-## initialize developer log file for this plugins
-[[ ! -f "$LOG" ]] && echo "tmux-gruvbar logfile" > "$LOG"
-LOG="/tmp/tmux-gruvbar.log"
-tmux set -g '@LOCAL_LOG' "$LOG"
-
 ## set option vars for icons and colors for easy access by 
 #  scripts local to this plugin
 tmux set -g '@ICONS'  "$LOCAL_ROOT/lib/icons.yaml"
