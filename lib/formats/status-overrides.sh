@@ -13,5 +13,3 @@ tmux set -g window-status-style fg=#{@Dark4}
 tmux set -g window-status-current-style fg=#{@Yellow},bold
 tmux set -g window-status-last-style fg=#{@Orange}
 tmux set -g window-status-activity-style bg=#{default},fg=#{default}
-tmux set -g status-right "#{?window_bigger,[#{window_offset_x}#,#{window_offset_y}] ,}"
-
