@@ -11,7 +11,6 @@ tmux set -g '@COLORS2' "$LOCAL_ROOT/lib/gruvbox.yaml"
 
 ## bind [CTRL]+t to run this program and view the developer output
 tmux bind C-t run "$LOCAL_ROOT/scripts/tmux-gruvbar.sh "
-tmux bind M-v run "$LOCAL_ROOT/gruvbar-test.sh"
 
 ## run main plugin script
-tmux run "$LOCAL_ROOT/scripts/tmux-gruvbar.sh "
+tmux run "$LOCAL_ROOT/scripts/tmux-gruvbar.sh"
