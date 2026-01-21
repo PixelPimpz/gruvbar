@@ -19,8 +19,8 @@ set_right()
 
 main()
 {
-  source "$SHARE/lib/share/dump.fun"
-  source "$SHARE/lib/share/fatal.fun"
+  source "$SHARE
+  source "$SHARE
   
   set_left
   set_right
