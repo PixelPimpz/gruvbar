@@ -15,7 +15,7 @@ main() {
   yq eval "${filter} | to_entries[] | ( .key + \"=\" + .value )" "$yaml" |
     while IFS="=" read -r key value; do
       tmux set -g "@$key" "$value"
-      dump ">>"
+      dump ">> $(tmux show -g @key)"
     done
 }
 main
