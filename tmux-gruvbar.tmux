@@ -8,6 +8,7 @@ tmux set -g '@LOCAL_LOG' "/tmp/gruvbar.log"
 #  scripts local to this plugin
 tmux set -g '@ICONS'  "$LOCAL_ROOT/lib/icons.yaml"
 tmux set -g '@COLORS' "$LOCAL_ROOT/lib/colors.yaml"
+tmux set -g '@COLORS2' "$LOCAL_ROOT/lib/gruvbox.yaml"
 
 ## bind [CTRL]+t to run this program and view the developer output
 tmux bind C-t run "$LOCAL_ROOT/scripts/tmux-gruvbar.sh "
