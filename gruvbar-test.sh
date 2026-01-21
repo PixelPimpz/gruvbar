@@ -10,12 +10,12 @@ dump ">> gruvbox-test.sh running..."
 dump ">> COLORS: $COLORS2"
 main() {
   local colors=()
-  local filter=".gruvbox_colors.*.*"
+  local filter=".gruvbox_colors.*"
   local yaml="$COLORS2"
-  yq eval "${filter} | to_entries[] | (.key + \"=\" + .value)" "$yaml" |
+  yq eval "${filter} | to_entries[] | ( .key + \"=\" + .value )" "$yaml" |
     while IFS="=" read -r key value; do
-      dump "${key}:${value}"
+      tmux set -g "@$key" "$value"
+      dump ">>"
     done
-  dump "${colors[@]}"
 }
 main
