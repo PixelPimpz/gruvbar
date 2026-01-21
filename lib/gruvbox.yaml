@@ -32,6 +32,7 @@ gruvbox_colors:
     gray_alt: "#928374"
     orange: "#d65d0e"
 
+
   # Row 4: Foreground Variants & Light Orange
   foreground_variants:
     bg0_s: "#32302f"
