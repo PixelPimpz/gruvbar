@@ -3,11 +3,22 @@ LOCAL_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 LOCAL_ROOT="${LOCAL_ROOT%\/*\/*}"
 SHARE="$( tmux show -gqv @CHER )"
 
+set_left()
+{
+  dump ">> set_left..."
+}
+
+set_right()
+{
+  dump ">> set_right..."
+}
+
 main()
 {
   ## include dependencies
   source "$SHARE/lib/share/dump.fun"
   source "$SHARE/lib/share/fatal.fun"
+
   dump ">>> lib/share/status-right.sh running..."
 
   ## read the units and place them in their respective

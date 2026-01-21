@@ -27,7 +27,7 @@ optionsFromYaml()
 
 main () 
 {
-  dump ">> new-gruv running..."
+  dump ">> gruvbar running..."
   local colors="$( tmux show -gqv '@COLORS' )"
   local icons="$( tmux show -gqv '@ICONS' )"
   optionsFromYaml "$colors" ".colors"
@@ -35,8 +35,7 @@ main ()
 
   ## load base status bar format
   tmux run  "$LOCAL_ROOT/lib/formats/status-overrides.sh"
-  tmux run  "$LOCAL_ROOT/lib/formats/status-right.sh"
-  #tmux run  "$LOCAL_ROOT/lib/formats/status-lef.sh"
+  tmux run  "$LOCAL_ROOT/lib/formats/status.sh"
   
   tmux set -u @LOCAL_ROOT
 }
