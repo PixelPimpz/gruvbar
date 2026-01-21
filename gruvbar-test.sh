@@ -16,4 +16,4 @@ main() {
     done
   dump "${colors[@]}"
 }
-
+main
