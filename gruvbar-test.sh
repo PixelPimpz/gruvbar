@@ -14,6 +14,6 @@ main() {
     while IFS="=" read -r key value; do
       colors+="${key}:${value}"
     done
-  dump "${#colors[@]}"
+  dump "${colors[@]}"
 }
 
