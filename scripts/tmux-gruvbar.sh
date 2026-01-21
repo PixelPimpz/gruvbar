@@ -5,8 +5,8 @@ SHARE=$( tmux show -gqv @CHER )"
 YQ="/usr/bin/yq"
 
 # include helper functions
-source "$SHARE
-source "$LOCAL_ROOT/lib/share/fatal.fun"
+source "$SHARE/dump.fun"
+source "$SHARE/fatal.fun"
 
 optionsFromYaml() 
 {
