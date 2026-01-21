@@ -30,7 +30,7 @@ main ()
   dump ">> gruvbar running..."
   local colors="$( tmux show -gqv '@COLORS' )"
   local icons="$( tmux show -gqv '@ICONS' )"
-  optionsFromYaml "$colors" ".colors"
+  optionsFromYaml "$colors" ".gruvbox-colors.*"
   optionsFromYaml "$icons" ".icons.sys"
 
   ## load base status bar format
