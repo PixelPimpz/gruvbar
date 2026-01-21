@@ -5,29 +5,26 @@ SHARE="$( tmux show -gqv @CHER )"
 
 set_left()
 {
-  dump ">> set_left..."
+  dump ">>> lib/share/status:set_left() running..."
+  tmux set -g status-left "#{E:@Gitgud}"
 }
 
 set_right()
 {
-  dump ">> set_right..."
+  dump ">>> lib/share/status:set_right() running..."
+  tmux set -g status-right "#{E:@nvim-info-unit}"
+  tmux set -ag status-right "#{T:@clockette}"
+  tmux set -ag status-right "#{T:@calendar}"
 }
 
 main()
 {
-  ## include dependencies
   source "$SHARE/lib/share/dump.fun"
   source "$SHARE/lib/share/fatal.fun"
+  
+  set_left
+  set_right
 
-  dump ">>> lib/share/status-right.sh running..."
-
-  ## read the units and place them in their respective
-  #  places
-  tmux set -g status-right "#{E:@nvim-info-unit}"
-  tmux set -ag status-right "#{T:@clockette}"
-  tmux set -ag status-right "#{T:@calendar}"
-
-  ## Data dumps for testing/debugging
   dump ">> SHARE: $SHARE"
 }
  
