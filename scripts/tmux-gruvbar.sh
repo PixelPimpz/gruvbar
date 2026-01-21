@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 LOCAL_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 LOCAL_ROOT="${LOCAL_ROOT%\/*}"
-SHARE=$( tmux show -gqv @CHER )"
+SHARE="$( tmux show -gqv @CHER )"
 YQ="/usr/bin/yq"
 
 # include helper functions
