@@ -12,7 +12,7 @@ main() {
   local colors=()
   yq eval ".gruvbox_colors.*.* | to_entries[] | ( .key + \"=\" + .value )" "$COLORS2" |
     while IFS="=" read -r key value; do
-      colors+="${key}:${value}"
+      dump "${key}:${value}"
     done
   dump "${colors[@]}"
 }
