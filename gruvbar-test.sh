@@ -7,5 +7,5 @@ source "$SHARE/fatal.fun"
 source "$SHARE/yaml2arr.fun"
 
 dump ">> gruvbox-test.sh running..."
-dump ">> COLORS: $COLORS"
-yq eval ".gruvbox_colors.*.*" "$COLORS"
+dump ">> COLORS: $COLORS2"
+yq eval ".gruvbox_colors.*.*" "$COLORS2"
