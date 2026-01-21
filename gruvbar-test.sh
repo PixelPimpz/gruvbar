@@ -10,8 +10,10 @@ dump ">> gruvbox-test.sh running..."
 dump ">> COLORS: $COLORS2"
 main() {
   local colors=()
-  yq eval ".gruvbox_colors.*.* | to_entries[] | ( .key + \"=\" + .value )" "$COLORS2" |
-    while  read -r key value; do
+  local filter=".gruvbox_colors.*.*"
+  local yaml="$COLORS2"
+  yq eval "${filter} | to_entries[] | (.key + \"=\" + .value)" "$yaml" |
+    while IFS="=" read -r key value; do
       dump "${key}:${value}"
     done
   dump "${colors[@]}"
