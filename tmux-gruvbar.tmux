@@ -11,7 +11,7 @@ tmux set -g '@COLORS' "$LOCAL_ROOT/lib/colors.yaml"
 
 ## bind [CTRL]+t to run this program and view the developer output
 tmux bind C-t run "$LOCAL_ROOT/scripts/tmux-gruvbar.sh "
-tmux bind C-9 run "$LOCAL_ROOT/gruvbar-test.sh"
+tmux bind M-v run "$LOCAL_ROOT/gruvbar-test.sh"
 
 ## run main plugin script
 tmux run "$LOCAL_ROOT/scripts/tmux-gruvbar.sh "
