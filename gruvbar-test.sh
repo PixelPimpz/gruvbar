@@ -8,4 +8,11 @@ source "$SHARE/yaml2arr.fun"
 
 dump ">> gruvbox-test.sh running..."
 dump ">> COLORS: $COLORS2"
-yq eval ".gruvbox_colors.*.*" "$COLORS2"
+main() {
+  local colors=()
+  yq eval ".gruvbox_colors.*.* | to_entries[] | ( .key + \"=\" + .value )" "$COLORS2" |
+    while IFS="=" read -r key value; do
+      colors+="${key}=${value}"
+    done
+}
+
