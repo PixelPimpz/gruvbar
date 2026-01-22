@@ -8,7 +8,7 @@ YQ="/usr/bin/yq"
 source "$SHARE/dump.fun"
 source "$SHARE/fatal.fun"
 source "$SHARE/yaml2opt.fun"
-
+dump ">> W T F !!!"
 yaml2opt ".gruvbox_colors.*" "$LOCAL_ROOT/lib/gruvbox.yaml"
 
 optionsFromYaml() 
@@ -35,6 +35,7 @@ main ()
   local icons="$( tmux show -gqv '@ICONS' )"
   #optionsFromYaml "$colors" ".gruvbox-colors.*"
   optionsFromYaml "$icons" ".icons.sys"
+  yaml2opt "$colors" ".gruvbox-colors.*"
   ## load base status bar format
   tmux run  "$LOCAL_ROOT/lib/formats/status-overrides.sh"
   tmux run  "$LOCAL_ROOT/lib/formats/status.sh"
