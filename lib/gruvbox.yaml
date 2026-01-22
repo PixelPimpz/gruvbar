@@ -12,14 +12,14 @@ gruvbox_colors:
 
   # Row 2: Bright
   bright:
-    gray: "#928374"
-    red: "#fb4934"
-    green: "#b8bb26"
-    yellow: "#fabd2f"
-    blue: "#83a598"
-    purple: "#d3869b"
-    aqua: "#8ec07c"
-    fg: "#ebdbb2"
+    gray_b: "#928374"
+    red_b: "#fb4934"
+    green_b: "#b8bb26"
+    yellow_b: "#fabd2f"
+    blue_b: "#83a598"
+    purple_b: "#d3869b"
+    aqua_b: "#8ec07c"
+    fg_b: "#ebdbb2"
 
   # Row 3: Background Variants & Dark Orange
   background_variants:
@@ -30,7 +30,7 @@ gruvbox_colors:
     bg3: "#665c54"
     bg4: "#7c6f64"
     gray_alt: "#928374"
-    orange: "#d65d0e"
+    orange_d: "#d65d0e"
 
 
   # Row 4: Foreground Variants & Light Orange
@@ -41,4 +41,4 @@ gruvbox_colors:
     fg2: "#d5c4a1"
     fg1: "#ebdbb2"
     fg0: "#fbf1c7"
-    orange: "#fe8019"
+    orange_b: "#fe8019"
