@@ -7,6 +7,9 @@ YQ="/usr/bin/yq"
 # include helper functions
 source "$SHARE/dump.fun"
 source "$SHARE/fatal.fun"
+source "$SHARE/yaml2opt.fun"
+
+
 
 optionsFromYaml() 
 {
@@ -28,11 +31,11 @@ optionsFromYaml()
 main () 
 {
   dump ">> gruvbar running..."
-  local colors="$( tmux show -gqv '@COLORS' )"
+  local colors="$( tmux show -gqv '@COLORS2' )"
   local icons="$( tmux show -gqv '@ICONS' )"
-  optionsFromYaml "$colors" ".gruvbox-colors.*"
+  #optionsFromYaml "$colors" ".gruvbox-colors.*"
   optionsFromYaml "$icons" ".icons.sys"
-
+  yaml2opt "$colors" ".gruvbox-colors.*"
   ## load base status bar format
   tmux run  "$LOCAL_ROOT/lib/formats/status-overrides.sh"
   tmux run  "$LOCAL_ROOT/lib/formats/status.sh"
