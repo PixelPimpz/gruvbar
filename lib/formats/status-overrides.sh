@@ -9,12 +9,12 @@ source "$LOCAL_ROOT/lib/share/dump.fun"
 dump ">> status overrides"
 tmux set -g @message-tmux-reload "#[align=centre]#{E:@Alert}  ~/.tmux.conf reloaded  #{E:@Alert}"
 tmux set -g status-justify centre
-tmux set -g status-style bg=#{default},fg=#{@Light3}
-tmux set -g window-status-style fg=#{@Dark3}
-tmux set -g window-status-current-style fg=#{@Yellow},bold
-tmux set -g window-status-last-style fg=#{@Light4}
-tmux set -g window-status-activity-style bg=#{default},fg=#{default}
+tmux set -g status-style bg="#{default},fg=#{@fg3}"
+tmux set -g window-status-style fg="#{@bg3}"
+tmux set -g window-status-current-style fg="#{@yellow},bold"
+tmux set -g window-status-last-style fg="#{@fg4}"
+tmux set -g window-status-activity-style bg="#{default},fg=#{default}"
 tmux set -g status-right-length 0
 tmux set -g status-left-length 0
-tmux set -g message-style "#[bg=default,fg=#{@BG0},align=centre]"
+tmux set -g message-style "#[bg=default,fg=#{@bg0},align=centre]"
 tmux set -g message-command-style "#[bg=default,fg=#{@Yellow},align=centre]"
