@@ -8,7 +8,6 @@ YQ="/usr/bin/yq"
 source "$SHARE/dump.fun"
 source "$SHARE/fatal.fun"
 source "$SHARE/yaml2opt.fun"
-dump ">> W T F !!!"
 
 optionsFromYaml() 
 {
