@@ -7,8 +7,6 @@
 LOCAL_ROOT="$( tmux show -gqv @LOCAL_ROOT )"
 source "$LOCAL_ROOT/lib/share/dump.fun"
 dump ">> status overrides"
-tmux set -g @message-tmux-reload "#[align=centre]#{E:@Alert}  ~/.tmux.conf reloaded  #{E:@Alert}"
-tmux set -g default-shell "/bin/bash"
 tmux set -g destroy-unattached true
 tmux set -g status-justify centre
 tmux set -g status-style bg="#{default},fg=#{@fg3}"
@@ -20,3 +18,5 @@ tmux set -g status-right-length 0
 tmux set -g status-left-length 0
 tmux set -g message-style "#[bg=default,fg=#{@bg0},align=centre]"
 tmux set -g message-command-style "#[bg=default,fg=#{@yellow_b},align=centre]"
+
+tmux set -g @message-tmux-reload "#[align=centre]#{E:@Alert}  ~/.tmux.conf reloaded  #{E:@Alert}"
