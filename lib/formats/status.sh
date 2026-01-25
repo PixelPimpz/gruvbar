@@ -14,7 +14,7 @@ set_right()
   dump ">>> lib/share/status:set_right() running..."
   tmux set -g status-right "#{E:@nvim-info-unit}"
   tmux set -ag status-right "#{T:@clockette}"
-  tmux set -ag status-right "#{T:@calendar}"
+  #tmux set -ag status-right "#{T:@calendar}"
 }
 
 main()
