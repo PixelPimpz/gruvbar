@@ -21,11 +21,8 @@ main()
 {
   source "$SHARE/dump.fun"
   source "$SHARE/fatal.fun"
-  
-  set_left
   set_right
-
-  dump ">> SHARE: $SHARE"
+  set_left
 }
  
 main
