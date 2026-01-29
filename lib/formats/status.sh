@@ -6,7 +6,7 @@ SHARE="$( tmux show -gqv @CHER )"
 set_left()
 {
   dump ">>> lib/share/status:set_left() running..."
-  tmux set -g status-left "#[fg=#{@green}]#{@HemiL}#[bg=#{@bg0},bold,reverse]#{E:@gitgud} #[noreverse]#{@TriangleR}"
+  tmux set -g status-left "#[fg=#{@green}]#{@HemiL}#[bg=#{@bg0},bold,reverse]#{E:@gitgud}#[noreverse]#{@TriangleR}"
 }
 
 set_right()
