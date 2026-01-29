@@ -13,7 +13,7 @@ set_right()
 {
   dump ">>> lib/share/status:set_right() running..."
   tmux set -g status-right "#{E:@nvim-info-unit}"
-  tmux set -ag status-right "#{@clockette}"
+  tmux set -ag status-right "#{E:@clockette}"
 }
 
 main()
