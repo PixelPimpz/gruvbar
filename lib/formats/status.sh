@@ -6,7 +6,7 @@ SHARE="$( tmux show -gqv @CHER )"
 set_left()
 {
   dump ">>> lib/share/status:set_left() running..."
-  tmux set -g status-left "#{E:@Gitgud}"
+  tmux set -g status-left "#{E:@gitgud}"
 }
 
 set_right()
