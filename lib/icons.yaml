@@ -7,6 +7,7 @@ icons:
     Alert: "#[fg=#{@orange_b}]#[fg=default]"
     Document: "󰈙"
     GitBranch: ""
+    Folder: ""
     HemiL: ""
     HemiR: ""
     ReloadAlert: "󱄋"
