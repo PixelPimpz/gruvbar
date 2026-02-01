@@ -4,11 +4,6 @@ tmux set -g '@LOCAL_ROOT' "$LOCAL_ROOT"
 tmux set -g '@TSTAMP' '+%d%m%y:%H%M%S.%3N'
 tmux set -g '@LOCAL_LOG' "/tmp/gruvbar.log"
 
-## set option vars for icons and colors for easy access by 
-#  scripts local to this plugin
-tmux set -g '@ICONS'  "$LOCAL_ROOT/lib/icons.yaml"
-tmux set -g '@COLORS2' "$LOCAL_ROOT/lib/gruvbox.yaml"
-
 ## bind [CTRL]+t to run this program and view the developer output
 tmux bind C-t run "$LOCAL_ROOT/scripts/tmux-gruvbar.sh "
 

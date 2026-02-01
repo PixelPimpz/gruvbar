@@ -12,7 +12,7 @@ source "$SHARE/yaml2opt.fun"
 main () 
 {
   dump ">> gruvbar running..."
-  local colors="$( tmux show -gqv '@COLORS2' )"
+  local colors="$( tmux show -gqv '@COLORS' )"
   local icons="$( tmux show -gqv '@ICONS' )"
   yaml2opt ".icons.sys" "$icons"
   yaml2opt ".gruvbox_colors.*" "$colors"
