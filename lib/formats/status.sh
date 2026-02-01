@@ -7,7 +7,7 @@ set_left()
 {
   dump ">>> lib/share/status:set_left() running..."
   tmux set -g status-left "#[fg=#{@green}]#{@HemiL}#[bg=#{@bg0},bold,reverse]#{E:@gitgud}#[noreverse]#{@TriangleR}"
-  tmux set -ag status-left "#[fg=#{@bg2}]#{@TriangleLInverse}#[bg=#{@fg1},bold,reverse] #{E:@nvim-info} #[bg=default,noreverse]#{@TriangleR}"
+  tmux set -ag status-left "#[fg=#{@bg2}]#{@TriangleLInverse}#[bg=#{@fg1},bold,reverse] #{E:@MF_NAME} #[bg=default,noreverse]#{@TriangleR}"
 }
 
 set_right()
