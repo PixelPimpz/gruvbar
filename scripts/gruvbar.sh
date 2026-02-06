@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#LOCAL_ROOT="$1" || fatal "missing arg: LOCAL_ROOT"
 SHARE="$( tmux show -gqv @CHER )"
 
 # include helper functions
