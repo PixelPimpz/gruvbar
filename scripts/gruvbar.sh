@@ -15,8 +15,8 @@ main ()
   yaml2opt ".icons.sys" "$icons"
   yaml2opt ".gruvbox_colors.*" "$colors"
   ## load base status bar format
-  tmux run  "$gb_root/lib/formats/status-overrides.sh"
-  tmux run  "$gb_root/lib/formats/status.sh"
+  tmux run  "$gb_root/formats/status-overrides.sh"
+  tmux run  "$gb_root/formats/status.sh"
 }
 
 main "$@"
