@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-LOCAL_ROOT="$1" || fatal "missing arg: LOCAL ROOT"
+#LOCAL_ROOT="$1" || fatal "missing arg: LOCAL_ROOT"
 SHARE="$( tmux show -gqv @CHER )"
 
 # include helper functions
@@ -10,7 +10,7 @@ source "$SHARE/yaml2opt.fun"
 
 main () 
 {
-  local gb_root="$1"
+  local gb_root="$1" || fatal "missing arg: LOCAL_ROOT"
   local colors="$( tmux show -gqv '@COLORS' )"
   local icons="$( tmux show -gqv '@ICONS' )"
   yaml2opt ".icons.sys" "$icons"
@@ -20,4 +20,4 @@ main ()
   tmux run  "$gb_root/lib/formats/status.sh"
 }
 
-main "$LOCAL_ROOT"
+main "$@"
