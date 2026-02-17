@@ -2,25 +2,23 @@
 LOCAL_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 LOCAL_ROOT="${LOCAL_ROOT%\/*\/*}"
 SHARE="$( tmux show -gqv @CHER )"
+source "$SHARE/dump.fun"
+source "$SHARE/fatal.fun"
 
 set_left()
 {
-  dump ">>> lib/share/status:set_left() running..."
   tmux set -g status-left "#[fg=#{@green}]#{@HemiL}#[bg=#{@bg0},bold,reverse]#{E:@MF_GIT}#[noreverse]#{@TriangleR}"
   tmux set -ag status-left "#[fg=#{@bg2}]#{@TriangleLInverse}#[bg=#{@fg1},bold,reverse] #{E:@MF_NAME} #[bg=default,noreverse]#{@TriangleR}"
 }
 
 set_right()
 {
-  dump ">>> lib/share/status:set_right() running..."
   tmux set -g status-right "#[fg=#{@blue}]#{@HemiL}#[bg=#{@fg1},bold,reverse]#{E:@clockette} #[bg=default,noreverse]#{@TriangleR}"
   tmux set -ag status-right  "#[fg=#{@aqua}]#{@TriangleLInverse}#[bg=#{@fg1},bold,reverse] #{E:@today}#[bg=default,noreverse]#{@HemiR}"
 }
 
 main()
 {
-  source "$SHARE/dump.fun"
-  source "$SHARE/fatal.fun"
   set_right
   set_left
 }
