@@ -13,7 +13,7 @@ set_left()
 set_right()
 {
   dump ">>> lib/share/status:set_right() running..."
-  tmux set -g status-right "#[fg=#{@blue}]#{@HemiL} "
+  tmux set -g status-right "#[fg=#{@blue}]#{@HemiL}"
   tmux set -ag status-right "#{E:@clockette}"
 }
 
