@@ -14,7 +14,7 @@ set_right()
 {
   dump ">>> lib/share/status:set_right() running..."
   tmux set -g status-right "#[fg=#{@blue}]#{@HemiL}#[bg=#{@fg1},bold,reverse]#{E:@clockette} #[bg=default,noreverse]#{@TriangleR}"
-  tmux set -ag status-right  "#[fg=#{@aqua}]#{@TriangleLInverse}#[bg=#{@fg1},bold,reverse]#{E:@today}"
+  tmux set -ag status-right  "#[fg=#{@aqua}]#{@TriangleLInverse}#[bg=#{@fg1},bold,reverse] #{E:@today}#[bg=default,noreverse]#{@HemiR}"
 }
 
 main()
