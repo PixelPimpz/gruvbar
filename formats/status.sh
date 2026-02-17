@@ -7,7 +7,7 @@ source "$SHARE/fatal.fun"
 
 set_left()
 {
-  tmux set -g status-left "#[fg=#{@green}]#{@HemiL}#[bg=#{@bg0},bold,reverse]#{E:@MF_GIT}#[noreverse]#{@TriangleR}"
+  tmux set -g status-left "#[fg=#{@aqua}]#{@HemiL}#[bg=#{@bg0},bold,reverse]#{E:@MF_GIT}#[noreverse]#{@TriangleR}"
   tmux set -ag status-left "#[fg=#{@bg2}]#{@TriangleLInverse}#[bg=#{@fg1},bold,reverse] #{E:@MF_NAME} #[bg=default,noreverse]#{@HemiR}"
 }
 
