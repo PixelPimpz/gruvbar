@@ -2,10 +2,10 @@
 SHARE="$( tmux show -gqv @CHER )"
 
 # include helper functions
-source "$SHARE/dump.fun"
-source "$SHARE/fatal.fun"
-source "$SHARE/yaml2item.fun"
-source "$SHARE/yaml2opt.fun"
+source "$SHARE/fun/dump.fun"
+source "$SHARE/fun/fatal.fun"
+source "$SHARE/fun/yaml2item.fun"
+source "$SHARE/fun/yaml2opt.fun"
 
 main () 
 {
