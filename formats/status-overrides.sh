@@ -5,7 +5,7 @@
 # | kept with the compunents themselves                      |
 # ------------------------------------------------------------
 LOCAL_ROOT="$( tmux show -gqv @LOCAL_ROOT )"
-source "$LOCAL_ROOT/lib/share/dump.fun"
+source "$LOCAL_ROOT/fun/dump.fun"
 dump ">> status overrides"
 tmux set -g destroy-unattached true
 tmux set -g status-style bg="#{default},fg=#{@fg3}"
