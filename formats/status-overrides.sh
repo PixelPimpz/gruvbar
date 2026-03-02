@@ -4,9 +4,8 @@
 # | any styles or formats for components (units) should be   | 
 # | kept with the compunents themselves                      |
 # ------------------------------------------------------------
-LOCAL_ROOT="$( tmux show -gqv @CHER )"
-#LOCAL_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-source "$LOCAL_ROOT/fun/dump.fun"
+SHARE="$( tmux show -gqv @CHER )"
+source "$SHARE/fun/dump.fun"
 dump ">> status overrides"
 tmux set -g destroy-unattached true
 tmux set -g status-justify centre
