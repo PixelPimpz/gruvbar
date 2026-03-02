@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#s!/usr/bin/env bash
 # ------------------------------------------------------------
 # | these overrides are for general status-bar settings ONLY |
 # | any styles or formats for components (units) should be   | 
@@ -18,5 +18,6 @@ tmux set -g status-right-length 0
 tmux set -g status-left-length 0
 tmux set -g message-style "#[bg=default,fg=#{@bg0},align=centre]"
 tmux set -g message-command-style "#[bg=default,fg=#{@yellow_b},align=centre]"
-
-tmux set -g @message-tmux-reload "#[align=centre]#{E:@Alert}  ~/.tmux.conf reloaded  #{E:@Alert}"
+tmux set -g @alert-style "#[fg=#{@yellow_b},bg=default]"
+tmux set -g @alert "#{E:@alert-style}#[push-default]#{E:@Alert}#[pop-default]"
+tmux set -g @message-tmux-reload "#[align=centre]#{E:@alert} tmux.conf reloaded #{E:@alert}"
