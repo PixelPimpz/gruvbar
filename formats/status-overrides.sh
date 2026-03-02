@@ -13,8 +13,8 @@ tmux set -g window-status-last-style fg="#{@fg4}"
 tmux set -g window-status-activity-style fg="#{default}"
 tmux set -g status-right-length 0
 tmux set -g status-left-length 0
-tmux set -g message-style "bg=default,fg=#{@blue},align=centre"
-tmux set -g message-command-style "#[bg=default,fg=#{@yellow_b},align=centre]"
+tmux set -g message-style "bg=default,fg=#{@green_b}"
+tmux set -g message-command-style "bg=default,fg=#{@yellow_b}"
 tmux set -g @alert-style "#[fg=#{@yellow_b},bg=default]"
 tmux set -g @alert "#{E:@alert-style}#[push-default]#{E:@Alert}#[pop-default]"
 tmux set -g @message-tmux-reload "#[align=centre]#{E:@alert}#[fg=#{@fg_b},align=centre]  tmux.conf reloaded #{E:@alert}"
