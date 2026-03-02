@@ -4,14 +4,11 @@
 # | any styles or formats for components (units) should be   | 
 # | kept with the compunents themselves                      |
 # ------------------------------------------------------------
-SHARE="$( tmux show -gqv @CHER )"
-source "$SHARE/fun/dump.fun"
-dump ">> status overrides"
 tmux set -g destroy-unattached true
 tmux set -g status-justify centre
 tmux set -g status-style "#[bg=default,fg=#{@fg3}]"
 tmux set -g window-status-style fg="#{@bg3}"
-tmux set -g window-status-current-style fg="#{@yellow_b},bold"
+tmux set -g window-status-current-style "#[fg=#{@yellow_b},bold]"
 tmux set -g window-status-last-style fg="#{@fg4}"
 tmux set -g window-status-activity-style fg="#{default}"
 tmux set -g status-right-length 0
