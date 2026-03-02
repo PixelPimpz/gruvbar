@@ -4,7 +4,7 @@ config:
   show-name: true
 icons:
   sys:
-    Alert: "#[fg=#{@orange_b}]#[fg=default]"
+    Alert: ""
     Document: "󰈙"
     GitBranch: ""
     Folder: ""
