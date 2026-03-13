@@ -21,7 +21,7 @@ main()
 {
   set_right
   set_left
-  tmux refresh-client
+  tmux refresh-client -S
 }
  
 main
